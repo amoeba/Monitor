@@ -10,8 +10,7 @@ import SwiftUI
 struct SourceRow: View {
     var source: Source
     
-    @State var ping = 0
-    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    @ObservedObject var ping = MyObserveableObject()
     
     var body: some View {
         HStack {
@@ -26,14 +25,15 @@ struct SourceRow: View {
             
             Spacer()
             
-            Text("\(ping)ms")
-                .onReceive(timer) { input in
-                    ping = Int.random(in: 1...100)
-                }
+            Text("\(ping.value)ms")
                 .frame(alignment: .trailing)
         }
         .padding()
+        .onAppear {
+            ping.start()
+        }
     }
+
 }
 
 struct SourceRow_Previews: PreviewProvider {
