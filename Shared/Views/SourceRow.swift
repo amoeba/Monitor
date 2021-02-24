@@ -10,7 +10,7 @@ import SwiftUI
 struct SourceRow: View {
     var source: Source
     
-    @ObservedObject var ping = MyObserveableObject()
+    @ObservedObject var pings = MyObserveableObject()
     
     var body: some View {
         HStack {
@@ -25,12 +25,12 @@ struct SourceRow: View {
             
             Spacer()
             
-            Text("\(ping.value)ms")
+            Text("\(pings.values[source.address] ?? -1)ms")
                 .frame(alignment: .trailing)
         }
         .padding()
         .onAppear {
-            ping.start()
+            pings.start()
         }
     }
 

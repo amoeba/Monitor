@@ -6,26 +6,28 @@
 //
 
 import Foundation
+import SwiftUI
 
 class MyObserveableObject : ObservableObject {
-    @Published var value: Int = 0
-    
+    @Published var values: Dictionary<String, Double> = [:]
     
     var timer = Timer()
     
     func start() {
-        self.timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
-            print("timer interval")
-
-                let once = try? SwiftyPing(host: "1.1.1.1", configuration: PingConfiguration(interval: 1), queue: DispatchQueue.global())
+        self.timer = Timer.scheduledTimer(withTimeInterval: 3.0, repeats: true) { timer in
+            print("--- timer interval ---")
+            
+            ["localhost", "1.1.1.1"].forEach({ host in
+                let once = try? SwiftyPing(host: host, configuration: PingConfiguration(interval: 1), queue: DispatchQueue.global())
                 once?.observer = { (response) in
-                    print("ping response")
-                    let val = Int(Double(response.duration!) * 1000)
+                    print("ping response \(host)")
+                    let val = Double(response.duration!) * 1000
                     print("\(val)")
-                    self.value = val
+                    self.values[host] = val
                 }
                 once?.targetCount = 1
                 try? once?.startPinging()
+            })
         }
     }
     
@@ -34,7 +36,7 @@ class MyObserveableObject : ObservableObject {
     }
     
     func reset() {
-        value = 0;
+        values = [:];
         timer.invalidate()
     }
 }

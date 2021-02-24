@@ -2,7 +2,7 @@
     {
         "id": 1,
         "name": "localhost",
-        "address": "192.168.1.1"
+        "address": "localhost"
     },
     {
         "id": 2,
