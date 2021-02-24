@@ -19,6 +19,8 @@
 		02984EB625E62BDC007CB2D7 /* sources.json in Resources */ = {isa = PBXBuildFile; fileRef = 02984EB425E62BDC007CB2D7 /* sources.json */; };
 		02984ECB25E63F91007CB2D7 /* TimerThingy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02984ECA25E63F91007CB2D7 /* TimerThingy.swift */; };
 		02984ECC25E63F91007CB2D7 /* TimerThingy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02984ECA25E63F91007CB2D7 /* TimerThingy.swift */; };
+		02984ED625E646F2007CB2D7 /* SwiftyPing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02984ED525E646F2007CB2D7 /* SwiftyPing.swift */; };
+		02984ED725E646F2007CB2D7 /* SwiftyPing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02984ED525E646F2007CB2D7 /* SwiftyPing.swift */; };
 		02C1DCEF25BF96040044A0E9 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C1DCEE25BF96040044A0E9 /* Tests_iOS.swift */; };
 		02C1DCFA25BF96040044A0E9 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C1DCF925BF96040044A0E9 /* Tests_macOS.swift */; };
 		02C1DCFC25BF96040044A0E9 /* MonitorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C1DCD325BF96030044A0E9 /* MonitorApp.swift */; };
@@ -53,6 +55,7 @@
 		02984EAC25E62B99007CB2D7 /* Source.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Source.swift; sourceTree = "<group>"; };
 		02984EB425E62BDC007CB2D7 /* sources.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = sources.json; sourceTree = "<group>"; };
 		02984ECA25E63F91007CB2D7 /* TimerThingy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerThingy.swift; sourceTree = "<group>"; };
+		02984ED525E646F2007CB2D7 /* SwiftyPing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyPing.swift; sourceTree = "<group>"; };
 		02C1DCD325BF96030044A0E9 /* MonitorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitorApp.swift; sourceTree = "<group>"; };
 		02C1DCD425BF96030044A0E9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		02C1DCD525BF96040044A0E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -131,6 +134,7 @@
 		02984EC925E63F84007CB2D7 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				02984ED525E646F2007CB2D7 /* SwiftyPing.swift */,
 				02984ECA25E63F91007CB2D7 /* TimerThingy.swift */,
 			);
 			path = Util;
@@ -287,7 +291,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1230;
-				LastUpgradeCheck = 1230;
+				LastUpgradeCheck = 1240;
 				TargetAttributes = {
 					02C1DCD925BF96040044A0E9 = {
 						CreatedOnToolsVersion = 12.3;
@@ -373,6 +377,7 @@
 				02984EA625E62B8B007CB2D7 /* ModelData.swift in Sources */,
 				02984E9725E62947007CB2D7 /* SourceDetail.swift in Sources */,
 				02984E9E25E6294D007CB2D7 /* SourceRow.swift in Sources */,
+				02984ED625E646F2007CB2D7 /* SwiftyPing.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,6 +392,7 @@
 				02984EA725E62B8B007CB2D7 /* ModelData.swift in Sources */,
 				02984E9825E62947007CB2D7 /* SourceDetail.swift in Sources */,
 				02984E9F25E6294D007CB2D7 /* SourceRow.swift in Sources */,
+				02984ED725E646F2007CB2D7 /* SwiftyPing.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -582,6 +588,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				ENABLE_PREVIEWS = YES;
@@ -604,6 +611,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				ENABLE_PREVIEWS = YES;
