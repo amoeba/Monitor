@@ -10,11 +10,10 @@ import Combine
 
 final class ModelData: ObservableObject {
     @Published var sources: [Source] = load("sources.json")
-
 }
 
-
 func load<T: Decodable>(_ filename: String) -> T {
+    print("Loading...")
     let data: Data
     
     guard let file = Bundle.main.url(forResource: filename, withExtension: nil)

@@ -31,8 +31,6 @@
 		02C1DCFF25BF96040044A0E9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C1DCD425BF96030044A0E9 /* ContentView.swift */; };
 		02C1DD0025BF96040044A0E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02C1DCD525BF96040044A0E9 /* Assets.xcassets */; };
 		02C1DD0125BF96040044A0E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02C1DCD525BF96040044A0E9 /* Assets.xcassets */; };
-		02C9088F25E9F01A00C66843 /* StopWatchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C9088E25E9F01A00C66843 /* StopWatchManager.swift */; };
-		02C9089025E9F01A00C66843 /* StopWatchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C9088E25E9F01A00C66843 /* StopWatchManager.swift */; };
 		02EC767225EB66BD001B8360 /* PingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02EC767125EB66BD001B8360 /* PingData.swift */; };
 		02EC767325EB66BD001B8360 /* PingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02EC767125EB66BD001B8360 /* PingData.swift */; };
 /* End PBXBuildFile section */
@@ -77,7 +75,6 @@
 		02C1DCF525BF96040044A0E9 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		02C1DCF925BF96040044A0E9 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		02C1DCFB25BF96040044A0E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		02C9088E25E9F01A00C66843 /* StopWatchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopWatchManager.swift; sourceTree = "<group>"; };
 		02EC767125EB66BD001B8360 /* PingData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PingData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -147,7 +144,6 @@
 			children = (
 				02984ED525E646F2007CB2D7 /* SwiftyPing.swift */,
 				02984ECA25E63F91007CB2D7 /* TimerThingy.swift */,
-				02C9088E25E9F01A00C66843 /* StopWatchManager.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -385,7 +381,6 @@
 				02C1DCFE25BF96040044A0E9 /* ContentView.swift in Sources */,
 				02C1DCFC25BF96040044A0E9 /* MonitorApp.swift in Sources */,
 				0238369B2601D03B00A24059 /* SourcesList.swift in Sources */,
-				02C9088F25E9F01A00C66843 /* StopWatchManager.swift in Sources */,
 				02984ECB25E63F91007CB2D7 /* TimerThingy.swift in Sources */,
 				02EC767225EB66BD001B8360 /* PingData.swift in Sources */,
 				02984EAD25E62B99007CB2D7 /* Source.swift in Sources */,
@@ -403,7 +398,6 @@
 				02C1DCFF25BF96040044A0E9 /* ContentView.swift in Sources */,
 				02C1DCFD25BF96040044A0E9 /* MonitorApp.swift in Sources */,
 				0238369C2601D03B00A24059 /* SourcesList.swift in Sources */,
-				02C9089025E9F01A00C66843 /* StopWatchManager.swift in Sources */,
 				02984ECC25E63F91007CB2D7 /* TimerThingy.swift in Sources */,
 				02EC767325EB66BD001B8360 /* PingData.swift in Sources */,
 				02984EAE25E62B99007CB2D7 /* Source.swift in Sources */,
