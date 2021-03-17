@@ -8,12 +8,16 @@
 import SwiftUI
 
 struct SourceRow: View {
+    @EnvironmentObject var modelData: ModelData
+
     var source: Source
     
-    @ObservedObject var pings = MyObserveableObject()
+    var sourceIndex: Int {
+        modelData.sources.firstIndex(where: { $0.id == source.id })!
+    }
     
     var body: some View {
-        HStack {
+        HStack() {
             VStack {
                 Text(source.name)
                 Text(source.address)
@@ -25,14 +29,14 @@ struct SourceRow: View {
             
             Spacer()
             
-            Text("\(pings.values[source.address] ?? -1)ms")
+            Text("100ms")
                 .frame(alignment: .trailing)
         }
         .padding()
-        .onAppear {
-            pings.start()
-        }
+
     }
+    
+
 
 }
 

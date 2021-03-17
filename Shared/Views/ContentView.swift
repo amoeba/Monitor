@@ -8,25 +8,20 @@
 import SwiftUI
 
 struct ContentView: View {
-    @EnvironmentObject var modelData: ModelData
-    
-    var filteredSources: [Source] {
-        modelData.sources.filter { landmark in
-            true
-        }
-    }
+
     var body: some View {
-        NavigationView {
-            List {
-                ForEach(filteredSources) { source in
-                    NavigationLink(destination: SourceDetail(source: source)) {
-                        SourceRow(source: source)
-                    }
-                }
+        VStack{
+            HStack{
+                Text("Monitor")
+                    .font(.largeTitle)
+                Spacer()
+                Button("+ Add", action: {
+                    print("Hi")
+                })
+                .padding(10.0)
             }
-            .frame(minWidth: 250)
+            SourcesList()
         }
-        .navigationTitle("Sources")
     }
 }
 
