@@ -22,14 +22,13 @@ struct SourceRow: View {
                 Text(source.name)
                 Text(source.address)
                     .font(.caption)
-
                     .foregroundColor(.gray)
             }
             .frame(alignment: .leading)
             
             Spacer()
             
-            Text("100ms")
+            Text("999ms")
                 .frame(alignment: .trailing)
         }
         .padding()

@@ -1,26 +1,23 @@
-//
-//  SourcesList.swift
-//  Monitor
-//
-//  Created by Bryce Mecum on 3/16/21.
-//
-
 import SwiftUI
 
 struct SourcesList: View {
     @EnvironmentObject var modelData: ModelData
-
-    var filteredSources: [Source] {
-        modelData.sources.filter { landmark in
-            true
-        }
+    
+    func delete(at offsets: IndexSet) {
+        modelData.sources.remove(atOffsets: offsets)
     }
     
     var body: some View {
-        List {
-            ForEach(filteredSources) { source in
-                SourceRow(source: source)
+        NavigationView {
+            List {
+                ForEach(modelData.sources) { source in
+                    NavigationLink(destination: SourceDetail(source: source)) {
+                        SourceRow(source: source)
+                    }
+                }
+                .onDelete(perform: delete)
             }
+            .navigationTitle("Sources")
         }
     }
 }

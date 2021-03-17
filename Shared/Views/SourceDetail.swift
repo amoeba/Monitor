@@ -17,12 +17,14 @@ struct SourceDetail: View {
     }
         
     var body: some View {
-        VStack {
-            Text(source.name)
-                .padding()
-            Text(source.address)
-                .padding()
+        Form {
+            TextField("Name", text: $modelData.sources[sourceIndex].name)
+                .padding(.vertical, 10.0)
+            TextField("Address", text: $modelData.sources[sourceIndex].address)
+                .padding(.vertical, 10.0)
         }
+        .navigationTitle("Edit Source")
+
     }
 }
 

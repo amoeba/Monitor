@@ -8,20 +8,10 @@
 import SwiftUI
 
 struct ContentView: View {
-
+    @EnvironmentObject var modelData: ModelData
+    
     var body: some View {
-        VStack{
-            HStack{
-                Text("Monitor")
-                    .font(.largeTitle)
-                Spacer()
-                Button("+ Add", action: {
-                    print("Hi")
-                })
-                .padding(10.0)
-            }
-            SourcesList()
-        }
+        SourcesList()
     }
 }
 
