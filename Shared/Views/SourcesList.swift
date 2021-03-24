@@ -17,7 +17,8 @@ struct SourcesList: View {
                 }
                 .onDelete(perform: delete)
             }
-            .navigationTitle("Sources")
+            .navigationTitle(nil)
+            .navigationBarHidden(true)
         }
     }
 }
