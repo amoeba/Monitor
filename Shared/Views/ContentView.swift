@@ -7,9 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
-    @EnvironmentObject var modelData: ModelData
-    
+struct ContentView: View {    
     var body: some View {
         SourcesList()
     }

@@ -17,12 +17,13 @@ struct SourceDetail: View {
     }
         
     var body: some View {
-        Form {
-            TextField("Name", text: $modelData.sources[sourceIndex].name)
-                .padding(.vertical, 10.0)
-            TextField("Address", text: $modelData.sources[sourceIndex].address)
-                .padding(.vertical, 10.0)
-        }
+        Text(source.name)
+//        Form {
+//            TextField("Name", text: $modelData.sources[sourceIndex].name)
+//                .padding(.vertical, 10.0)
+//            TextField("Address", text: $modelData.sources[sourceIndex].address)
+//                .padding(.vertical, 10.0)
+//        }
         .navigationTitle("Edit Source")
 
     }

@@ -8,8 +8,6 @@
 import SwiftUI
 
 struct SourceRow: View {
-    @EnvironmentObject var modelData: ModelData
-    
     var source: Source
     
     var body: some View {
@@ -20,12 +18,10 @@ struct SourceRow: View {
                     .font(.caption)
                     .foregroundColor(.gray)
             }
-            .frame(alignment: .leading)
             
             Spacer()
             
             Text("\(String(source.lastPing ?? -1))ms")
-                .frame(alignment: .trailing)
         }
         .padding()
     }

@@ -36,16 +36,16 @@ final class ModelData: ObservableObject {
     }
     
     func updateList() {
-        sources.forEach { source in
+        self.sources.forEach { source in
             var sourceIndex: Int {
-                sources.firstIndex(where: { $0.id == source.id })!
+                self.sources.firstIndex(where: { $0.id == source.id })!
             }
             
-            let once = try? SwiftyPing(host: "1.1.1.1", configuration: PingConfiguration(interval: 0.5, with: 5), queue: DispatchQueue.global())
+            let once = try? SwiftyPing(host: source.address, configuration: PingConfiguration(interval: 1, with: 5), queue: DispatchQueue.global())
             once?.observer = { (response) in
                 let duration = response.duration
-                self.sources[sourceIndex].lastPing = duration
-                print(duration ?? "ERROR")
+                
+                self.sources[sourceIndex].lastPing = Int(round((duration ?? -1) * 1000))
             }
             once?.targetCount = 1
             try? once?.startPinging()
@@ -54,7 +54,6 @@ final class ModelData: ObservableObject {
 }
 
 func load<T: Decodable>(_ filename: String) -> T {
-    print("Loading...")
     let data: Data
     
     guard let file = Bundle.main.url(forResource: filename, withExtension: nil)
