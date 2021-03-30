@@ -12,12 +12,14 @@ struct SourceRow: View {
     
     var body: some View {
         HStack() {
-            VStack {
+            VStack(alignment: .leading) {
                 Text(source.name)
                 Text(source.address)
                     .font(.caption)
                     .foregroundColor(.gray)
             }
+            .frame(alignment: .leading)
+
             
             Spacer()
             
