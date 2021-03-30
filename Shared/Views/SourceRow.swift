@@ -18,8 +18,6 @@ struct SourceRow: View {
                     .font(.caption)
                     .foregroundColor(.gray)
             }
-            .frame(alignment: .leading)
-
             
             Spacer()
             
