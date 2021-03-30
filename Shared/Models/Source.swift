@@ -13,5 +13,5 @@ struct Source: Hashable, Codable, Identifiable {
     var id: Int
     var name: String
     var address: String
-    var lastPing: Int?
+    var lastPing: String?
 }

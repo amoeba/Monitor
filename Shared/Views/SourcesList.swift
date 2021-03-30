@@ -2,22 +2,34 @@ import SwiftUI
 
 struct SourcesList: View {
     @EnvironmentObject var modelData: ModelData
+    @State private var editMode = EditMode.inactive
     
-    func delete(at offsets: IndexSet) {
+    private func delete(at offsets: IndexSet) {
         modelData.sources.remove(atOffsets: offsets)
+    }
+
+    private func move(source: IndexSet, destination: Int) {
+        modelData.sources.move(fromOffsets: source, toOffset: destination)
+    }
+
+    private func foo(){
+        print("foo")
     }
     
     var body: some View {
-        NavigationView {
+        VStack {
+            HStack {
+                Spacer()
+                EditButton()
+                    .padding(.trailing, 10.0)
+            }
             List {
                 ForEach(modelData.sources) { source in
-                    NavigationLink(destination: SourceDetail(source: source)) {
-                        SourceRow(source: source)
-                    }
+                    SourceRow(source: source)
                 }
                 .onDelete(perform: delete)
+                .onMove(perform: move)
             }
-            .navigationTitle("Sources")
         }
     }
 }

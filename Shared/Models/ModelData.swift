@@ -43,12 +43,18 @@ final class ModelData: ObservableObject {
             
             let once = try? SwiftyPing(host: source.address, configuration: PingConfiguration(interval: 1, with: 5), queue: DispatchQueue.global())
             once?.observer = { (response) in
-                let duration = response.duration
-                
-                self.sources[sourceIndex].lastPing = Int(round((duration ?? -1) * 1000))
+                self.sources[sourceIndex].lastPing = self.formatPing(duration: response.duration)
             }
             once?.targetCount = 1
             try? once?.startPinging()
+        }
+    }
+    
+    func formatPing(duration: TimeInterval?) -> String {
+        if duration != nil {
+            return "\(Int(round(duration! * 1000)))"
+        } else {
+            return "?"
         }
     }
 }

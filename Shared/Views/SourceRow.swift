@@ -18,10 +18,12 @@ struct SourceRow: View {
                     .font(.caption)
                     .foregroundColor(.gray)
             }
-            
             Spacer()
-            
-            Text("\(String(source.lastPing ?? -1))ms")
+            HStack(alignment: .bottom, spacing: 0){
+                Text(source.lastPing ?? "?")
+                Text("ms")
+                    .font(.footnote)
+            }
         }
         .padding()
     }
