@@ -7,6 +7,7 @@
 
 import Foundation
 import Combine
+import SwiftyPing
 
 final class ModelData: ObservableObject {
     @Published var sources: [Source] = load("sources.json")

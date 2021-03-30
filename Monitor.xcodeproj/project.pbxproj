@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		020F13192612EA6000C72931 /* SwiftyPing in Frameworks */ = {isa = PBXBuildFile; productRef = 020F13182612EA6000C72931 /* SwiftyPing */; };
 		0238369B2601D03B00A24059 /* SourcesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0238369A2601D03B00A24059 /* SourcesList.swift */; };
 		0238369C2601D03B00A24059 /* SourcesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0238369A2601D03B00A24059 /* SourcesList.swift */; };
 		02984E9725E62947007CB2D7 /* SourceDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02984E9625E62947007CB2D7 /* SourceDetail.swift */; };
@@ -19,10 +20,6 @@
 		02984EAE25E62B99007CB2D7 /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02984EAC25E62B99007CB2D7 /* Source.swift */; };
 		02984EB525E62BDC007CB2D7 /* sources.json in Resources */ = {isa = PBXBuildFile; fileRef = 02984EB425E62BDC007CB2D7 /* sources.json */; };
 		02984EB625E62BDC007CB2D7 /* sources.json in Resources */ = {isa = PBXBuildFile; fileRef = 02984EB425E62BDC007CB2D7 /* sources.json */; };
-		02984ECB25E63F91007CB2D7 /* TimerThingy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02984ECA25E63F91007CB2D7 /* TimerThingy.swift */; };
-		02984ECC25E63F91007CB2D7 /* TimerThingy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02984ECA25E63F91007CB2D7 /* TimerThingy.swift */; };
-		02984ED625E646F2007CB2D7 /* SwiftyPing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02984ED525E646F2007CB2D7 /* SwiftyPing.swift */; };
-		02984ED725E646F2007CB2D7 /* SwiftyPing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02984ED525E646F2007CB2D7 /* SwiftyPing.swift */; };
 		02C1DCEF25BF96040044A0E9 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C1DCEE25BF96040044A0E9 /* Tests_iOS.swift */; };
 		02C1DCFA25BF96040044A0E9 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C1DCF925BF96040044A0E9 /* Tests_macOS.swift */; };
 		02C1DCFC25BF96040044A0E9 /* MonitorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C1DCD325BF96030044A0E9 /* MonitorApp.swift */; };
@@ -57,8 +54,6 @@
 		02984EA525E62B8B007CB2D7 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		02984EAC25E62B99007CB2D7 /* Source.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Source.swift; sourceTree = "<group>"; };
 		02984EB425E62BDC007CB2D7 /* sources.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = sources.json; sourceTree = "<group>"; };
-		02984ECA25E63F91007CB2D7 /* TimerThingy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerThingy.swift; sourceTree = "<group>"; };
-		02984ED525E646F2007CB2D7 /* SwiftyPing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyPing.swift; sourceTree = "<group>"; };
 		02C1DCD325BF96030044A0E9 /* MonitorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitorApp.swift; sourceTree = "<group>"; };
 		02C1DCD425BF96030044A0E9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		02C1DCD525BF96040044A0E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -80,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				020F13192612EA6000C72931 /* SwiftyPing in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,8 +134,6 @@
 		02984EC925E63F84007CB2D7 /* Util */ = {
 			isa = PBXGroup;
 			children = (
-				02984ED525E646F2007CB2D7 /* SwiftyPing.swift */,
-				02984ECA25E63F91007CB2D7 /* TimerThingy.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -231,6 +225,9 @@
 			dependencies = (
 			);
 			name = "Monitor (iOS)";
+			packageProductDependencies = (
+				020F13182612EA6000C72931 /* SwiftyPing */,
+			);
 			productName = "Monitor (iOS)";
 			productReference = 02C1DCDA25BF96040044A0E9 /* Monitor.app */;
 			productType = "com.apple.product-type.application";
@@ -322,6 +319,9 @@
 				Base,
 			);
 			mainGroup = 02C1DCCD25BF96030044A0E9;
+			packageReferences = (
+				020F13172612EA6000C72931 /* XCRemoteSwiftPackageReference "SwiftyPing" */,
+			);
 			productRefGroup = 02C1DCDB25BF96040044A0E9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -377,12 +377,10 @@
 				02C1DCFE25BF96040044A0E9 /* ContentView.swift in Sources */,
 				02C1DCFC25BF96040044A0E9 /* MonitorApp.swift in Sources */,
 				0238369B2601D03B00A24059 /* SourcesList.swift in Sources */,
-				02984ECB25E63F91007CB2D7 /* TimerThingy.swift in Sources */,
 				02984EAD25E62B99007CB2D7 /* Source.swift in Sources */,
 				02984EA625E62B8B007CB2D7 /* ModelData.swift in Sources */,
 				02984E9725E62947007CB2D7 /* SourceDetail.swift in Sources */,
 				02984E9E25E6294D007CB2D7 /* SourceRow.swift in Sources */,
-				02984ED625E646F2007CB2D7 /* SwiftyPing.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,12 +391,10 @@
 				02C1DCFF25BF96040044A0E9 /* ContentView.swift in Sources */,
 				02C1DCFD25BF96040044A0E9 /* MonitorApp.swift in Sources */,
 				0238369C2601D03B00A24059 /* SourcesList.swift in Sources */,
-				02984ECC25E63F91007CB2D7 /* TimerThingy.swift in Sources */,
 				02984EAE25E62B99007CB2D7 /* Source.swift in Sources */,
 				02984EA725E62B8B007CB2D7 /* ModelData.swift in Sources */,
 				02984E9825E62947007CB2D7 /* SourceDetail.swift in Sources */,
 				02984E9F25E6294D007CB2D7 /* SourceRow.swift in Sources */,
-				02984ED725E646F2007CB2D7 /* SwiftyPing.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -768,6 +764,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		020F13172612EA6000C72931 /* XCRemoteSwiftPackageReference "SwiftyPing" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/samiyr/SwiftyPing.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.13;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		020F13182612EA6000C72931 /* SwiftyPing */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 020F13172612EA6000C72931 /* XCRemoteSwiftPackageReference "SwiftyPing" */;
+			productName = SwiftyPing;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 02C1DCCE25BF96030044A0E9 /* Project object */;
 }
