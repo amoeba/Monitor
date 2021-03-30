@@ -40,7 +40,23 @@ final class ModelData: ObservableObject {
                 sources.firstIndex(where: { $0.id == source.id })!
             }
             
-            sources[sourceIndex].lastPing = Double.random(in: 1...100)
+//            sources[sourceIndex].lastPing = Double.random(in: 1...100)
+//
+            
+            
+            let once = try? SwiftyPing(host: "1.1.1.1", configuration: PingConfiguration(interval: 0.5, with: 5), queue: DispatchQueue.global())
+            once?.observer = { (response) in
+                let duration = response.duration
+                self.sources[sourceIndex].lastPing = duration
+                print(duration ?? "ERROR")
+            }
+            once?.targetCount = 1
+            try? once?.startPinging()
+            
+            
+            
+            
+            
         }
     }
 }

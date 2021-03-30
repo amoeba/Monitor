@@ -24,7 +24,7 @@ struct SourceRow: View {
             
             Spacer()
             
-            Text("\(String(round(source.lastPing ?? -1)))ms")
+            Text("\(String(source.lastPing ?? -1))ms")
                 .frame(alignment: .trailing)
         }
         .padding()
