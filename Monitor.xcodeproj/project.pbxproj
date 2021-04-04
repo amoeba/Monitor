@@ -182,9 +182,9 @@
 			isa = PBXGroup;
 			children = (
 				02C1DCE425BF96040044A0E9 /* Info.plist */,
-				02C1DCE525BF96040044A0E9 /* macOS.entitlements */,
 				021D9115261988480081C589 /* ContentView.swift */,
 				021D9123261988890081C589 /* SourcesList.swift */,
+				02C1DCE525BF96040044A0E9 /* macOS.entitlements */,
 			);
 			path = macOS;
 			sourceTree = "<group>";
