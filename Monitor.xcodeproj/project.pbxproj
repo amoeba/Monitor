@@ -10,6 +10,8 @@
 		021D9116261988480081C589 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021D9115261988480081C589 /* ContentView.swift */; };
 		021D9124261988890081C589 /* SourcesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021D9123261988890081C589 /* SourcesList.swift */; };
 		021D914726199B860081C589 /* SourceRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02984E9D25E6294D007CB2D7 /* SourceRow.swift */; };
+		021D914D2619A1110081C589 /* AddSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021D914C2619A1110081C589 /* AddSource.swift */; };
+		021D91532619A8E80081C589 /* ModalTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021D91522619A8E80081C589 /* ModalTest.swift */; };
 		0238369B2601D03B00A24059 /* SourcesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0238369A2601D03B00A24059 /* SourcesList.swift */; };
 		02984E9E25E6294D007CB2D7 /* SourceRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02984E9D25E6294D007CB2D7 /* SourceRow.swift */; };
 		02984EA625E62B8B007CB2D7 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02984EA525E62B8B007CB2D7 /* ModelData.swift */; };
@@ -47,6 +49,8 @@
 /* Begin PBXFileReference section */
 		021D9115261988480081C589 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		021D9123261988890081C589 /* SourcesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourcesList.swift; sourceTree = "<group>"; };
+		021D914C2619A1110081C589 /* AddSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSource.swift; sourceTree = "<group>"; };
+		021D91522619A8E80081C589 /* ModalTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalTest.swift; sourceTree = "<group>"; };
 		0238369A2601D03B00A24059 /* SourcesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourcesList.swift; sourceTree = "<group>"; };
 		02984E9D25E6294D007CB2D7 /* SourceRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceRow.swift; sourceTree = "<group>"; };
 		02984EA525E62B8B007CB2D7 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
@@ -130,6 +134,8 @@
 				02C1DCD425BF96030044A0E9 /* ContentView.swift */,
 				0238369A2601D03B00A24059 /* SourcesList.swift */,
 				02984E9D25E6294D007CB2D7 /* SourceRow.swift */,
+				021D914C2619A1110081C589 /* AddSource.swift */,
+				021D91522619A8E80081C589 /* ModalTest.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -377,7 +383,9 @@
 				0238369B2601D03B00A24059 /* SourcesList.swift in Sources */,
 				02984EAD25E62B99007CB2D7 /* Source.swift in Sources */,
 				02984EA625E62B8B007CB2D7 /* ModelData.swift in Sources */,
+				021D914D2619A1110081C589 /* AddSource.swift in Sources */,
 				02984E9E25E6294D007CB2D7 /* SourceRow.swift in Sources */,
+				021D91532619A8E80081C589 /* ModalTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

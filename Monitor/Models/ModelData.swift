@@ -57,19 +57,29 @@ final class ModelData: ObservableObject {
         }
     }
     
-    func addNewSource() {
-        NSLog("Adding new source")
+    func addSource(name: String, address: String) {
+        NSLog("Adding new source: \(name), \(address)")
         
-        let newSource = Source(name: "name", address: "1.1.1.1")
+        let newSource = Source(name: name, address: address)
         self.sources.append(newSource)
         
+        save()
+    }
+    
+    func deleteSource(at offsets: IndexSet) {
+        sources.remove(atOffsets: offsets)
+        save()
+    }
+
+    func moveSource(source: IndexSet, destination: Int) {
+        sources.move(fromOffsets: source, toOffset: destination)
         save()
     }
     
     func deleteSource(source: Source) -> Void {
         if let index = self.sources.firstIndex(where: { $0.id == source.id }) {
             sources.remove(at: index)
-            gsave()
+            save()
         }
     }
     

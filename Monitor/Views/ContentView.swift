@@ -9,22 +9,23 @@ import SwiftUI
 
 struct ContentView: View {
     @EnvironmentObject var modelData: ModelData
+    @State private var isShowingAddView = false
     
     var body: some View {
-        VStack {
-            HStack() {
-                Text("Monitor")
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
-                Spacer()
+        NavigationView {
+            VStack {
+                SourcesList()
+                NavigationLink(destination: AddSource(), isActive: $isShowingAddView) { EmptyView() }
+                Button("Tap to show detail") {
+                    self.isShowingAddView = true
+                }
+                NavigationLink(destination: AddSource()) {
+                    Text("Add New Source")
+                }
             }
-            .padding(.leading, 10.0)
-            SourcesList()
-            Button(action: modelData.addNewSource, label: {
-                Text("Add New Source")
-            })
-            .padding(.vertical, 15.0)
         }
+        .navigationBarTitle("Monitor")
+
     }
 }
 
