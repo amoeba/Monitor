@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  Shared
-//
-//  Created by Bryce Mecum on 1/25/21.
-//
-
 import SwiftUI
 
 struct ContentView: View {
@@ -21,7 +14,6 @@ struct ContentView: View {
             }
             .navigationBarTitle("Monitor")
         }
-
     }
 }
 

@@ -1,10 +1,3 @@
-//
-//  AddSource.swift
-//  Monitor (iOS)
-//
-//  Created by Bryce Mecum on 4/3/21.
-//
-
 import SwiftUI
 
 struct AddSource: View {

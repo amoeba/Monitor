@@ -1,10 +1,3 @@
-//
-//  SourceRow.swift
-//  Monitor
-//
-//  Created by Bryce Mecum on 2/23/21.
-//
-
 import SwiftUI
 
 struct SourceRow: View {
