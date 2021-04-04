@@ -18,8 +18,8 @@ struct ContentView: View {
                     Text("Add New Source")
                 }
             }
+            .navigationBarTitle("Monitor")
         }
-        .navigationBarTitle("Monitor")
 
     }
 }
