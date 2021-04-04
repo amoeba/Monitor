@@ -32,7 +32,7 @@ struct AddSource: View {
             }
             .disabled(!isFormValid)
         }
-        .navigationTitle("Add New Source")
+        .navigationBarTitle("Add New Source")
     }
 }
 
