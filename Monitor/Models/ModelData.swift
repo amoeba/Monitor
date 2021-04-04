@@ -9,12 +9,15 @@ import Foundation
 import Combine
 
 final class ModelData: ObservableObject {
-    @Published var sources: [Source] = load("sources.json")
+    @Published var sources: [Source]
     
     weak var timer: Timer?
     let interval = 1.0
+    let filename : String = "sources.json"
     
     init(){
+        sources = []
+        sources = load(filename)
         startTimer()
     }
     
@@ -55,12 +58,84 @@ final class ModelData: ObservableObject {
     }
     
     func addNewSource() {
+        NSLog("Adding new source")
+        
         let newSource = Source(name: "name", address: "1.1.1.1")
         self.sources.append(newSource)
+        
+        save()
+    }
+    
+    func getDocumentDirectory() -> URL {
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        
+        return paths[0]
+    }
+    
+    func save() {
+        NSLog("Saving...")
+        
+        var file = getDocumentDirectory()
+        file.appendPathComponent("sources.json")
+        
+        NSLog("Save file is \(file)")
+        
+        let encoder = JSONEncoder()
+        encoder.outputFormatting = .prettyPrinted
+
+        let json: Data
+        
+        do {
+            json = try encoder.encode(sources)
+        } catch {
+            fatalError("Couldn't encode:\n\(error)")
+        }
+        
+        do {
+            try json.write(to: file)
+        } catch {
+            fatalError("Couldn't write to \(file):\n\(error)")
+        }
+        
+        NSLog("Saved")
+    }
+    
+    func load(_ filename: String) -> [Source] {
+        NSLog("Loading...")
+        
+        let data: Data
+        let decoder = JSONDecoder()
+        var sources: [Source] = []
+        
+        var file = getDocumentDirectory()
+        file.appendPathComponent("sources.json")
+        
+        let fileManager = FileManager.default
+        if !fileManager.fileExists(atPath: file.absoluteString) {
+            NSLog("Sources file does not exist, loading default list")
+            
+            return loadDefaults("defaultSources.json")
+        }
+        
+        do {
+            data = try Data(contentsOf: file)
+        } catch {
+            fatalError("Couldn't load \(filename) from main bundle: \n\(error)")
+        }
+        
+        do {
+            sources = try decoder.decode([Source].self, from: data)
+        } catch {
+            fatalError("Couldn't parse \(filename):\n\(error)")
+        }
+        
+        NSLog("Loaded \(sources.count) sources from \(file)")
+        
+        return sources
     }
 }
 
-func load<T: Decodable>(_ filename: String) -> T {
+func loadDefaults<T: Decodable>(_ filename: String) -> T {
     let data: Data
     
     guard let file = Bundle.main.url(forResource: filename, withExtension: nil)
