@@ -9,10 +9,9 @@
 /* Begin PBXBuildFile section */
 		020F13332612ED5500C72931 /* SwiftyPing in Frameworks */ = {isa = PBXBuildFile; productRef = 020F13322612ED5500C72931 /* SwiftyPing */; };
 		020F133A2612EEAA00C72931 /* SwiftyPing in Frameworks */ = {isa = PBXBuildFile; productRef = 020F13392612EEAA00C72931 /* SwiftyPing */; };
-		020F134526131F8E00C72931 /* NewSourceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020F134426131F8E00C72931 /* NewSourceView.swift */; };
-		020F134626131F8E00C72931 /* NewSourceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020F134426131F8E00C72931 /* NewSourceView.swift */; };
+		021D9116261988480081C589 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021D9115261988480081C589 /* ContentView.swift */; };
+		021D9124261988890081C589 /* SourcesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021D9123261988890081C589 /* SourcesList.swift */; };
 		0238369B2601D03B00A24059 /* SourcesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0238369A2601D03B00A24059 /* SourcesList.swift */; };
-		0238369C2601D03B00A24059 /* SourcesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0238369A2601D03B00A24059 /* SourcesList.swift */; };
 		02984E9E25E6294D007CB2D7 /* SourceRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02984E9D25E6294D007CB2D7 /* SourceRow.swift */; };
 		02984E9F25E6294D007CB2D7 /* SourceRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02984E9D25E6294D007CB2D7 /* SourceRow.swift */; };
 		02984EA625E62B8B007CB2D7 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02984EA525E62B8B007CB2D7 /* ModelData.swift */; };
@@ -26,7 +25,6 @@
 		02C1DCFC25BF96040044A0E9 /* MonitorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C1DCD325BF96030044A0E9 /* MonitorApp.swift */; };
 		02C1DCFD25BF96040044A0E9 /* MonitorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C1DCD325BF96030044A0E9 /* MonitorApp.swift */; };
 		02C1DCFE25BF96040044A0E9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C1DCD425BF96030044A0E9 /* ContentView.swift */; };
-		02C1DCFF25BF96040044A0E9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C1DCD425BF96030044A0E9 /* ContentView.swift */; };
 		02C1DD0025BF96040044A0E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02C1DCD525BF96040044A0E9 /* Assets.xcassets */; };
 		02C1DD0125BF96040044A0E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02C1DCD525BF96040044A0E9 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -49,7 +47,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		020F134426131F8E00C72931 /* NewSourceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSourceView.swift; sourceTree = "<group>"; };
+		021D9115261988480081C589 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		021D9123261988890081C589 /* SourcesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourcesList.swift; sourceTree = "<group>"; };
 		0238369A2601D03B00A24059 /* SourcesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourcesList.swift; sourceTree = "<group>"; };
 		02984E9D25E6294D007CB2D7 /* SourceRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceRow.swift; sourceTree = "<group>"; };
 		02984EA525E62B8B007CB2D7 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
@@ -135,7 +134,6 @@
 				02C1DCD425BF96030044A0E9 /* ContentView.swift */,
 				0238369A2601D03B00A24059 /* SourcesList.swift */,
 				02984E9D25E6294D007CB2D7 /* SourceRow.swift */,
-				020F134426131F8E00C72931 /* NewSourceView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -143,7 +141,7 @@
 		02C1DCCD25BF96030044A0E9 = {
 			isa = PBXGroup;
 			children = (
-				02C1DCD225BF96030044A0E9 /* Shared */,
+				02C1DCD225BF96030044A0E9 /* Monitor */,
 				02C1DCDC25BF96040044A0E9 /* iOS */,
 				02C1DCE325BF96040044A0E9 /* macOS */,
 				02C1DCED25BF96040044A0E9 /* Tests iOS */,
@@ -153,7 +151,7 @@
 			);
 			sourceTree = "<group>";
 		};
-		02C1DCD225BF96030044A0E9 /* Shared */ = {
+		02C1DCD225BF96030044A0E9 /* Monitor */ = {
 			isa = PBXGroup;
 			children = (
 				02984EC025E62C3A007CB2D7 /* Views */,
@@ -162,7 +160,7 @@
 				02C1DCD325BF96030044A0E9 /* MonitorApp.swift */,
 				02C1DCD525BF96040044A0E9 /* Assets.xcassets */,
 			);
-			path = Shared;
+			path = Monitor;
 			sourceTree = "<group>";
 		};
 		02C1DCDB25BF96040044A0E9 /* Products */ = {
@@ -189,6 +187,8 @@
 			children = (
 				02C1DCE425BF96040044A0E9 /* Info.plist */,
 				02C1DCE525BF96040044A0E9 /* macOS.entitlements */,
+				021D9115261988480081C589 /* ContentView.swift */,
+				021D9123261988890081C589 /* SourcesList.swift */,
 			);
 			path = macOS;
 			sourceTree = "<group>";
@@ -383,7 +383,6 @@
 				02C1DCFC25BF96040044A0E9 /* MonitorApp.swift in Sources */,
 				0238369B2601D03B00A24059 /* SourcesList.swift in Sources */,
 				02984EAD25E62B99007CB2D7 /* Source.swift in Sources */,
-				020F134526131F8E00C72931 /* NewSourceView.swift in Sources */,
 				02984EA625E62B8B007CB2D7 /* ModelData.swift in Sources */,
 				02984E9E25E6294D007CB2D7 /* SourceRow.swift in Sources */,
 			);
@@ -393,11 +392,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02C1DCFF25BF96040044A0E9 /* ContentView.swift in Sources */,
 				02C1DCFD25BF96040044A0E9 /* MonitorApp.swift in Sources */,
-				0238369C2601D03B00A24059 /* SourcesList.swift in Sources */,
+				021D9116261988480081C589 /* ContentView.swift in Sources */,
 				02984EAE25E62B99007CB2D7 /* Source.swift in Sources */,
-				020F134626131F8E00C72931 /* NewSourceView.swift in Sources */,
+				021D9124261988890081C589 /* SourcesList.swift in Sources */,
 				02984EA725E62B8B007CB2D7 /* ModelData.swift in Sources */,
 				02984E9F25E6294D007CB2D7 /* SourceRow.swift in Sources */,
 			);
