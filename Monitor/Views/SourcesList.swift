@@ -6,10 +6,12 @@ struct SourcesList: View {
     
     private func delete(at offsets: IndexSet) {
         modelData.sources.remove(atOffsets: offsets)
+        modelData.save()
     }
 
     private func move(source: IndexSet, destination: Int) {
         modelData.sources.move(fromOffsets: source, toOffset: destination)
+        modelData.save()
     }
 
     private func foo(){
