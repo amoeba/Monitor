@@ -8,6 +8,11 @@ struct SourcesList: View {
             List {
                 ForEach(modelData.sources) { source in
                     SourceRow(source: source)
+                        .contextMenu {
+                            Button("Delete") {
+                                modelData.deleteSource(source: source)
+                            }
+                        }
                 }
             }
         }
@@ -20,3 +25,4 @@ struct SourcesList_Previews: PreviewProvider {
             .environmentObject(ModelData())
     }
 }
+

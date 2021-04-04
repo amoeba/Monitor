@@ -9,9 +9,9 @@
 /* Begin PBXBuildFile section */
 		021D9116261988480081C589 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021D9115261988480081C589 /* ContentView.swift */; };
 		021D9124261988890081C589 /* SourcesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021D9123261988890081C589 /* SourcesList.swift */; };
+		021D914726199B860081C589 /* SourceRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02984E9D25E6294D007CB2D7 /* SourceRow.swift */; };
 		0238369B2601D03B00A24059 /* SourcesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0238369A2601D03B00A24059 /* SourcesList.swift */; };
 		02984E9E25E6294D007CB2D7 /* SourceRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02984E9D25E6294D007CB2D7 /* SourceRow.swift */; };
-		02984E9F25E6294D007CB2D7 /* SourceRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02984E9D25E6294D007CB2D7 /* SourceRow.swift */; };
 		02984EA625E62B8B007CB2D7 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02984EA525E62B8B007CB2D7 /* ModelData.swift */; };
 		02984EA725E62B8B007CB2D7 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02984EA525E62B8B007CB2D7 /* ModelData.swift */; };
 		02984EAD25E62B99007CB2D7 /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02984EAC25E62B99007CB2D7 /* Source.swift */; };
@@ -386,11 +386,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				02C1DCFD25BF96040044A0E9 /* MonitorApp.swift in Sources */,
+				021D914726199B860081C589 /* SourceRow.swift in Sources */,
 				021D9116261988480081C589 /* ContentView.swift in Sources */,
 				02984EAE25E62B99007CB2D7 /* Source.swift in Sources */,
 				021D9124261988890081C589 /* SourcesList.swift in Sources */,
 				02984EA725E62B8B007CB2D7 /* ModelData.swift in Sources */,
-				02984E9F25E6294D007CB2D7 /* SourceRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

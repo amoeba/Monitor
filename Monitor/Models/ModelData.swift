@@ -66,6 +66,13 @@ final class ModelData: ObservableObject {
         save()
     }
     
+    func deleteSource(source: Source) -> Void {
+        if let index = self.sources.firstIndex(where: { $0.id == source.id }) {
+            sources.remove(at: index)
+            gsave()
+        }
+    }
+    
     func getDocumentDirectory() -> URL {
         let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         
