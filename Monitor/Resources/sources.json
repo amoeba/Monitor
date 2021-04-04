@@ -1,11 +1,11 @@
 [
     {
-        "id": 1,
+        "id": "B9FFF8DD-7573-4BCE-93E0-2616E9EF87B2",
         "name": "localhost",
         "address": "localhost"
     },
     {
-        "id": 2,
+        "id": "E8105602-72FD-418D-8676-C5EC1C7D78CC",
         "name": "CloudFlare",
         "address": "1.1.1.1"
     }
