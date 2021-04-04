@@ -53,6 +53,11 @@ final class ModelData: ObservableObject {
             return "..."
         }
     }
+    
+    func addNewSource() {
+        let newSource = Source(name: "name", address: "1.1.1.1")
+        self.sources.append(newSource)
+    }
 }
 
 func load<T: Decodable>(_ filename: String) -> T {

@@ -10,7 +10,7 @@ import SwiftUI
 import CoreLocation
 
 struct Source: Hashable, Codable, Identifiable {
-    var id: Int
+    var id: UUID = UUID()
     var name: String
     var address: String
     var lastPing: String?

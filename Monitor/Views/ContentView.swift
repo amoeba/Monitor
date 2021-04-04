@@ -9,11 +9,6 @@ import SwiftUI
 
 struct ContentView: View {
     @EnvironmentObject var modelData: ModelData
-
-    private func addNewSource() {
-        let newSource = Source(id: 3, name: "name", address: "1.1.1.1")
-        modelData.sources.append(newSource)
-    }
     
     var body: some View {
         VStack {
@@ -25,7 +20,7 @@ struct ContentView: View {
             }
             .padding(.leading, 10.0)
             SourcesList()
-            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+            Button(action: modelData.addNewSource, label: {
                 Text("Add New Source")
             })
             .padding(.vertical, 15.0)
