@@ -20,12 +20,12 @@ struct SourceRow: View {
             }
             Spacer()
             HStack(alignment: .bottom, spacing: 0){
-                Text(source.lastPing ?? "?")
-                Text("ms")
+                Text(source.lastPing == nil ? "" : source.lastPing ?? "...")
+                Text(source.lastPingUnit ?? "")
                     .font(.footnote)
             }
         }
-        .padding()
+        .padding(0)
     }
 }
 

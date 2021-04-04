@@ -14,4 +14,5 @@ struct Source: Hashable, Codable, Identifiable {
     var name: String
     var address: String
     var lastPing: String?
+    var lastPingUnit: String?
 }

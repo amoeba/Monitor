@@ -7,7 +7,6 @@
 
 import Foundation
 import Combine
-import SwiftyPing
 
 final class ModelData: ObservableObject {
     @Published var sources: [Source] = load("sources.json")
@@ -41,20 +40,17 @@ final class ModelData: ObservableObject {
                 self.sources.firstIndex(where: { $0.id == source.id })!
             }
             
-            let once = try? SwiftyPing(host: source.address, configuration: PingConfiguration(interval: 1, with: 5), queue: DispatchQueue.global())
-            once?.observer = { (response) in
-                self.sources[sourceIndex].lastPing = self.formatPing(duration: response.duration)
-            }
-            once?.targetCount = 1
-            try? once?.startPinging()
+            // Dummy data for now until I can figure out accurate pingin
+            self.sources[sourceIndex].lastPing = formatPing(duration: Double.random(in: 0...1))
+            self.sources[sourceIndex].lastPingUnit = "ms"
         }
     }
     
-    func formatPing(duration: TimeInterval?) -> String {
+    func formatPing(duration: Double?) -> String {
         if duration != nil {
             return "\(Int(round(duration! * 1000)))"
         } else {
-            return "?"
+            return "..."
         }
     }
 }

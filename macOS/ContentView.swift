@@ -10,13 +10,6 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            HStack() {
-                Text("Monitor")
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
-                Spacer()
-            }
-            .padding(.leading, 10.0)
             SourcesList()
             Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
                 Text("Add New Source")

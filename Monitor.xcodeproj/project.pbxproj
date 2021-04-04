@@ -3,12 +3,10 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		020F13332612ED5500C72931 /* SwiftyPing in Frameworks */ = {isa = PBXBuildFile; productRef = 020F13322612ED5500C72931 /* SwiftyPing */; };
-		020F133A2612EEAA00C72931 /* SwiftyPing in Frameworks */ = {isa = PBXBuildFile; productRef = 020F13392612EEAA00C72931 /* SwiftyPing */; };
 		021D9116261988480081C589 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021D9115261988480081C589 /* ContentView.swift */; };
 		021D9124261988890081C589 /* SourcesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021D9123261988890081C589 /* SourcesList.swift */; };
 		0238369B2601D03B00A24059 /* SourcesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0238369A2601D03B00A24059 /* SourcesList.swift */; };
@@ -75,7 +73,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				020F133A2612EEAA00C72931 /* SwiftyPing in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,7 +80,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				020F13332612ED5500C72931 /* SwiftyPing in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,7 +224,6 @@
 			);
 			name = "Monitor (iOS)";
 			packageProductDependencies = (
-				020F13392612EEAA00C72931 /* SwiftyPing */,
 			);
 			productName = "Monitor (iOS)";
 			productReference = 02C1DCDA25BF96040044A0E9 /* Monitor.app */;
@@ -248,7 +243,6 @@
 			);
 			name = "Monitor (macOS)";
 			packageProductDependencies = (
-				020F13322612ED5500C72931 /* SwiftyPing */,
 			);
 			productName = "Monitor (macOS)";
 			productReference = 02C1DCE225BF96040044A0E9 /* Monitor.app */;
@@ -325,7 +319,6 @@
 			);
 			mainGroup = 02C1DCCD25BF96030044A0E9;
 			packageReferences = (
-				020F13312612ED5500C72931 /* XCRemoteSwiftPackageReference "SwiftyPing" */,
 			);
 			productRefGroup = 02C1DCDB25BF96040044A0E9 /* Products */;
 			projectDirPath = "";
@@ -767,30 +760,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		020F13312612ED5500C72931 /* XCRemoteSwiftPackageReference "SwiftyPing" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/samiyr/SwiftyPing.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.1.13;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		020F13322612ED5500C72931 /* SwiftyPing */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 020F13312612ED5500C72931 /* XCRemoteSwiftPackageReference "SwiftyPing" */;
-			productName = SwiftyPing;
-		};
-		020F13392612EEAA00C72931 /* SwiftyPing */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 020F13312612ED5500C72931 /* XCRemoteSwiftPackageReference "SwiftyPing" */;
-			productName = SwiftyPing;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 02C1DCCE25BF96030044A0E9 /* Project object */;
 }
