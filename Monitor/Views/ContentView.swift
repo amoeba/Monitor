@@ -16,6 +16,7 @@ struct ContentView: View {
                 SourcesList()
                 NavigationLink(destination: AddSource()) {
                     Text("Add New Source")
+                        .padding(.top, 15.0)
                 }
             }
             .navigationBarTitle("Monitor")
