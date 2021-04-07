@@ -16,6 +16,9 @@
 		02384960261D9BE100D574DC /* SwiftyPing in Frameworks */ = {isa = PBXBuildFile; productRef = 0238495F261D9BE100D574DC /* SwiftyPing */; };
 		02384966261D9E6C00D574DC /* PingThingy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02384965261D9E6C00D574DC /* PingThingy.swift */; };
 		02384967261D9E6C00D574DC /* PingThingy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02384965261D9E6C00D574DC /* PingThingy.swift */; };
+		0238497A261DACA600D574DC /* SwiftyPing in Frameworks */ = {isa = PBXBuildFile; productRef = 02384979261DACA600D574DC /* SwiftyPing */; };
+		02384991261DB3B700D574DC /* AddSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02384990261DB3B700D574DC /* AddSource.swift */; };
+		0238499F261DB70E00D574DC /* TestTextFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0238499E261DB70E00D574DC /* TestTextFields.swift */; };
 		02984E9E25E6294D007CB2D7 /* SourceRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02984E9D25E6294D007CB2D7 /* SourceRow.swift */; };
 		02984EA625E62B8B007CB2D7 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02984EA525E62B8B007CB2D7 /* ModelData.swift */; };
 		02984EA725E62B8B007CB2D7 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02984EA525E62B8B007CB2D7 /* ModelData.swift */; };
@@ -56,6 +59,8 @@
 		021D91522619A8E80081C589 /* ModalTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalTest.swift; sourceTree = "<group>"; };
 		0238369A2601D03B00A24059 /* SourcesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourcesList.swift; sourceTree = "<group>"; };
 		02384965261D9E6C00D574DC /* PingThingy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PingThingy.swift; sourceTree = "<group>"; };
+		02384990261DB3B700D574DC /* AddSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSource.swift; sourceTree = "<group>"; };
+		0238499E261DB70E00D574DC /* TestTextFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTextFields.swift; sourceTree = "<group>"; };
 		02984E9D25E6294D007CB2D7 /* SourceRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceRow.swift; sourceTree = "<group>"; };
 		02984EA525E62B8B007CB2D7 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		02984EAC25E62B99007CB2D7 /* Source.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Source.swift; sourceTree = "<group>"; };
@@ -89,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0238497A261DACA600D574DC /* SwiftyPing in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,6 +202,8 @@
 				02C1DCE425BF96040044A0E9 /* Info.plist */,
 				021D9115261988480081C589 /* ContentView.swift */,
 				021D9123261988890081C589 /* SourcesList.swift */,
+				02384990261DB3B700D574DC /* AddSource.swift */,
+				0238499E261DB70E00D574DC /* TestTextFields.swift */,
 				02C1DCE525BF96040044A0E9 /* macOS.entitlements */,
 			);
 			path = macOS;
@@ -256,6 +264,7 @@
 			);
 			name = "Monitor (macOS)";
 			packageProductDependencies = (
+				02384979261DACA600D574DC /* SwiftyPing */,
 			);
 			productName = "Monitor (macOS)";
 			productReference = 02C1DCE225BF96040044A0E9 /* Monitor.app */;
@@ -404,7 +413,9 @@
 			files = (
 				02C1DCFD25BF96040044A0E9 /* MonitorApp.swift in Sources */,
 				021D914726199B860081C589 /* SourceRow.swift in Sources */,
+				0238499F261DB70E00D574DC /* TestTextFields.swift in Sources */,
 				021D9116261988480081C589 /* ContentView.swift in Sources */,
+				02384991261DB3B700D574DC /* AddSource.swift in Sources */,
 				02984EAE25E62B99007CB2D7 /* Source.swift in Sources */,
 				021D9124261988890081C589 /* SourcesList.swift in Sources */,
 				02984EA725E62B8B007CB2D7 /* ModelData.swift in Sources */,
@@ -607,6 +618,7 @@
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = R3B8RRS734;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = macOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -630,6 +642,7 @@
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = R3B8RRS734;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = macOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -792,6 +805,11 @@
 
 /* Begin XCSwiftPackageProductDependency section */
 		0238495F261D9BE100D574DC /* SwiftyPing */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0238495E261D9BE100D574DC /* XCRemoteSwiftPackageReference "SwiftyPing" */;
+			productName = SwiftyPing;
+		};
+		02384979261DACA600D574DC /* SwiftyPing */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 0238495E261D9BE100D574DC /* XCRemoteSwiftPackageReference "SwiftyPing" */;
 			productName = SwiftyPing;

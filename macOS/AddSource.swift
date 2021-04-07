@@ -4,6 +4,7 @@ struct AddSource: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @EnvironmentObject var modelData : ModelData
     @State var isDisabled : Bool = true
+    @Binding var isAddShowing: Bool
     
     @State var name : String = ""
     @State var address: String = ""
@@ -14,24 +15,22 @@ struct AddSource: View {
     
     var body: some View {
         Form {
-            Section {
+            HStack {
                 TextField("Name", text: $name)
-                    .disableAutocorrection(true)
                 TextField("Address", text: $address)
-                    .disableAutocorrection(true)
+                Button("Add") {
+                    modelData.addSource(name: name, address: address)
+                    self.presentationMode.wrappedValue.dismiss()
+                    isAddShowing = false
+                }
             }
-            
-            Button("Add Source") {
-                modelData.addSource(name: name, address: address)
-                self.presentationMode.wrappedValue.dismiss()
-            }
-            .disabled(!isFormValid)
         }
     }
 }
 
 struct AddSource_Previews: PreviewProvider {
+
     static var previews: some View {
-        AddSource()
+        AddSource(isAddShowing: .constant(true))
     }
 }

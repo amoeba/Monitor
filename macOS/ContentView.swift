@@ -6,11 +6,8 @@ struct ContentView: View {
     var body: some View {
         VStack {
             SourcesList()
-            Button(action: modelData.addNewSource, label: {
-                Text("Add New Source")
-            })
-            .padding(.vertical, 15.0)
         }
+        .frame(minWidth: 250, idealWidth: 250)
     }
 }
 

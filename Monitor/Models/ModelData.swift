@@ -63,6 +63,9 @@ final class ModelData: ObservableObject {
             } else {
                 message = error.localizedDescription
             }
+            
+            NSLog(message)
+
             self.sources[sourceIndex].lastPing = message
             self.sources[sourceIndex].lastPing = message
             self.sources[sourceIndex].lastPingGrade = PingGrade.bad.rawValue
@@ -87,6 +90,13 @@ final class ModelData: ObservableObject {
     
     func addSource(name: String, address: String) {
         NSLog("Adding new source: \(name), \(address)")
+        
+        // Stop if address isn't set and non-zero in length
+        if address.count <= 0 {
+            NSLog("Skipped adding new source because address wasn't set")
+            
+            return
+        }
         
         var finalName = name
         
