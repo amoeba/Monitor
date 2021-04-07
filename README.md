@@ -6,3 +6,5 @@ Based mostly off the ping portion of [Ubiquiti WiFiman](https://blog.ui.com/2018
 **Status:** macOS: ✅, iOS: ✅
 
 Note: Name may change and this is not in the app store at this point.
+
+![gif of Monitor](./docs/demo.gif)
