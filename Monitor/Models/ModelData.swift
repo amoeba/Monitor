@@ -36,24 +36,13 @@ final class ModelData: ObservableObject {
                 self.sources.firstIndex(where: { $0.id == source.id })!
             }
             
+            
             do {
-                var ping : SwiftyPing?
-                
-                ping = try SwiftyPing(host: self.sources[sourceIndex].address, configuration: PingConfiguration(interval: 1.0, with: 1), queue: DispatchQueue.global())
+                let ping : SwiftyPing? = try SwiftyPing(host: self.sources[sourceIndex].address, configuration: PingConfiguration(interval: 1.0, with: 1), queue: DispatchQueue.global())
                 
                 ping?.observer = { (response) in
                     DispatchQueue.main.async {
-                        var message = "\(round(response.duration! * 1000)) ms"
-                        
-                        if let error = response.error {
-                            if error == .responseTimeout {
-                                message = "err"
-                            } else {
-                                message = error.localizedDescription
-                            }
-                        }
-                        
-                        self.sources[sourceIndex].lastPing = message
+                        self.handlePingResponse(sourceIndex: sourceIndex, response: response)
                     }
                 }
                 ping?.targetCount = 1
@@ -63,6 +52,29 @@ final class ModelData: ObservableObject {
                 self.sources[sourceIndex].lastPing = "err"
             }
         }
+    }
+    
+    func handlePingResponse(sourceIndex: Int, response: PingResponse) {
+        var message = ""
+        
+        if let error = response.error {
+            if error == .responseTimeout {
+                message = "err"
+            } else {
+                message = error.localizedDescription
+            }
+            self.sources[sourceIndex].lastPing = message
+            self.sources[sourceIndex].lastPing = message
+            self.sources[sourceIndex].lastPingGrade = PingGrade.bad.rawValue
+
+            return
+        }
+        
+        let resp = PingThingy(fromDuration: response.duration)
+        
+        self.sources[sourceIndex].lastPing = resp.getPing()
+        self.sources[sourceIndex].lastPingUnit = resp.getUnit()
+        self.sources[sourceIndex].lastPingGrade = resp.getGrade()
     }
     
     func formatPing(duration: Double?) -> String {
@@ -76,7 +88,14 @@ final class ModelData: ObservableObject {
     func addSource(name: String, address: String) {
         NSLog("Adding new source: \(name), \(address)")
         
-        let newSource = Source(name: name, address: address)
+        var finalName = name
+        
+        // Set name to address is name is not specified
+        if (name.count == 0){
+            finalName = address
+        }
+        
+        let newSource = Source(name: finalName, address: address)
         self.sources.append(newSource)
         
         save()

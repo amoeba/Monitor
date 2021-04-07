@@ -8,4 +8,11 @@ struct Source: Hashable, Codable, Identifiable {
     var address: String
     var lastPing: String?
     var lastPingUnit: String?
+    var lastPingGrade: Int?
+}
+
+enum PingGrade : Int {
+    case good = 0
+    case okay = 1
+    case bad = 2
 }
