@@ -16,7 +16,11 @@ struct AddSource: View {
         Form {
             Section {
                 TextField("Name", text: $name)
+                    .autocapitalization(.none)
+                    .disableAutocorrection(true)
                 TextField("Address", text: $address)
+                    .autocapitalization(.none)
+                    .disableAutocorrection(true)
             }
             
             Button("Add Source") {
