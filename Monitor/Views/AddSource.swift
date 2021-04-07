@@ -9,7 +9,7 @@ struct AddSource: View {
     @State var address: String = ""
     
     var isFormValid: Bool {
-        name.count > 0 && address.count > 0
+        address.count > 0
     }
     
     var body: some View {
