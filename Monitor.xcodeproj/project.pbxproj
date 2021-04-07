@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,7 @@
 		021D914D2619A1110081C589 /* AddSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021D914C2619A1110081C589 /* AddSource.swift */; };
 		021D91532619A8E80081C589 /* ModalTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021D91522619A8E80081C589 /* ModalTest.swift */; };
 		0238369B2601D03B00A24059 /* SourcesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0238369A2601D03B00A24059 /* SourcesList.swift */; };
+		02384960261D9BE100D574DC /* SwiftyPing in Frameworks */ = {isa = PBXBuildFile; productRef = 0238495F261D9BE100D574DC /* SwiftyPing */; };
 		02984E9E25E6294D007CB2D7 /* SourceRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02984E9D25E6294D007CB2D7 /* SourceRow.swift */; };
 		02984EA625E62B8B007CB2D7 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02984EA525E62B8B007CB2D7 /* ModelData.swift */; };
 		02984EA725E62B8B007CB2D7 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02984EA525E62B8B007CB2D7 /* ModelData.swift */; };
@@ -77,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02384960261D9BE100D574DC /* SwiftyPing in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,6 +232,7 @@
 			);
 			name = "Monitor (iOS)";
 			packageProductDependencies = (
+				0238495F261D9BE100D574DC /* SwiftyPing */,
 			);
 			productName = "Monitor (iOS)";
 			productReference = 02C1DCDA25BF96040044A0E9 /* Monitor.app */;
@@ -325,6 +328,7 @@
 			);
 			mainGroup = 02C1DCCD25BF96030044A0E9;
 			packageReferences = (
+				0238495E261D9BE100D574DC /* XCRemoteSwiftPackageReference "SwiftyPing" */,
 			);
 			productRefGroup = 02C1DCDB25BF96040044A0E9 /* Products */;
 			projectDirPath = "";
@@ -768,6 +772,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0238495E261D9BE100D574DC /* XCRemoteSwiftPackageReference "SwiftyPing" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/samiyr/SwiftyPing";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.14;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0238495F261D9BE100D574DC /* SwiftyPing */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0238495E261D9BE100D574DC /* XCRemoteSwiftPackageReference "SwiftyPing" */;
+			productName = SwiftyPing;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 02C1DCCE25BF96030044A0E9 /* Project object */;
 }

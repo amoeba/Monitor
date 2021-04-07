@@ -1,15 +1,15 @@
 import Foundation
 import Combine
+import SwiftyPing
 
 final class ModelData: ObservableObject {
-    @Published var sources: [Source]
+    @Published var sources: [Source] = []
     
     weak var timer: Timer?
     let interval = 1.0
     let filename : String = "sources.json"
     
     init(){
-        sources = []
         sources = load(filename)
         startTimer()
     }
@@ -36,9 +36,32 @@ final class ModelData: ObservableObject {
                 self.sources.firstIndex(where: { $0.id == source.id })!
             }
             
-            // Dummy data for now until I can figure out accurate pingin
-            self.sources[sourceIndex].lastPing = formatPing(duration: Double.random(in: 0...1))
-            self.sources[sourceIndex].lastPingUnit = "ms"
+            do {
+                var ping : SwiftyPing?
+                
+                ping = try SwiftyPing(host: self.sources[sourceIndex].address, configuration: PingConfiguration(interval: 1.0, with: 1), queue: DispatchQueue.global())
+                
+                ping?.observer = { (response) in
+                    DispatchQueue.main.async {
+                        var message = "\(round(response.duration! * 1000)) ms"
+                        
+                        if let error = response.error {
+                            if error == .responseTimeout {
+                                message = "err"
+                            } else {
+                                message = error.localizedDescription
+                            }
+                        }
+                        
+                        self.sources[sourceIndex].lastPing = message
+                    }
+                }
+                ping?.targetCount = 1
+                
+                try ping?.startPinging()
+            } catch {
+                self.sources[sourceIndex].lastPing = "err"
+            }
         }
     }
     

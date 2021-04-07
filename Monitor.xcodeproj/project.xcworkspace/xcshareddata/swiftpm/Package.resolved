@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "SwiftyPing",
+        "repositoryURL": "https://github.com/samiyr/SwiftyPing",
+        "state": {
+          "branch": null,
+          "revision": "3c3286173548c82718582019434601a89aa7a7fa",
+          "version": "1.1.14"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
